@@ -7,58 +7,68 @@ endif
 
 let g:colors_name = 'chrome'
 
-hi Normal                       ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi VertSplit                    ctermfg=NONE    ctermbg=NONE    cterm=NONE      term=NONE
-hi Cursor                       ctermfg=NONE    ctermbg=252     cterm=NONE      term=NONE
-hi CursorLine                   ctermfg=NONE    ctermbg=234     cterm=NONE      term=NONE
-hi CursorLineNr                 ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi FoldColumn                   ctermfg=248     ctermbg=NONE    cterm=NONE      term=NONE
-hi Folded                       ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi LineNr                       ctermfg=248     ctermbg=NONE    cterm=NONE      term=NONE
-hi Statement                    ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi PreProc                      ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi String                       ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi Comment                      ctermfg=243     ctermbg=NONE    cterm=NONE      term=NONE
-hi Constant                     ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi Type                         ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi Function                     ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi Identifier                   ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi Special                      ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi MatchParen                   ctermfg=248     ctermbg=NONE    cterm=reverse   term=reverse
-hi rubyConstant                 ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi rubySharpBang                ctermfg=243     ctermbg=NONE    cterm=NONE      term=NONE
-hi rubyStringDelimiter          ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi rubyStringEscape             ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi rubyRegexpEscape             ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi rubyRegexpAnchor             ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi rubyRegexpSpecial            ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi perlSharpBang                ctermfg=243     ctermbg=NONE    cterm=NONE      term=NONE
-hi perlStringStartEnd           ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi perlStringEscape             ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi perlMatchStartEnd            ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi pythonEscape                 ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi javaScriptFunction           ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi elixirDelimiter              ctermfg=67      ctermbg=NONE    cterm=NONE      term=NONE
-hi Search                       ctermfg=252     ctermbg=67      cterm=NONE      term=NONE
-hi Visual                       ctermfg=252     ctermbg=67      cterm=NONE      term=NONE
-hi NonText                      ctermfg=NONE    ctermbg=NONE    cterm=NONE      term=NONE
-hi Directory                    ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi Title                        ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi markdownHeadingDelimiter     ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi markdownHeadingRule          ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi markdownLinkText             ctermfg=67      ctermbg=NONE    cterm=underline term=underline
-hi Todo                         ctermfg=NONE    ctermbg=226     cterm=NONE      term=NONE
-hi Pmenu                        ctermfg=252     ctermbg=67      cterm=NONE      term=NONE
-hi PmenuSel                     ctermfg=67      ctermbg=252     cterm=NONE      term=NONE
-hi helpSpecial                  ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi helpHyperTextJump            ctermfg=67      ctermbg=NONE    cterm=underline term=underline
-hi helpNote                     ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimOption                    ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimGroup                     ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimHiClear                   ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimHiGroup                   ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimHiAttrib                  ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimHiCTerm                   ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimHiCTermFgBg               ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimSynType                   ctermfg=252     ctermbg=NONE    cterm=NONE      term=NONE
-hi vimCommentTitle              ctermfg=243     ctermbg=NONE    cterm=NONE      term=NONE
+hi! Normal ctermfg=252 ctermbg=NONE cterm=NONE term=NONE
+hi! link Constant Normal
+hi! link Type Normal
+hi! link Function Normal
+hi! link Identifier Normal
+hi! link Special Normal
+hi! link CursorLineNr Normal
+hi! link rubyConstant Normal
+hi! link javaScriptFunction Normal
+hi! link Directory Normal
+hi! link Title Normal
+hi! link markdownHeadingDelimiter Normal
+hi! link markdownHeadingRule Normal
+hi! link helpSpecial Normal
+hi! link helpNote Normal
+hi! link vimOption Normal
+hi! link vimGroup Normal
+hi! link vimHiClear Normal
+hi! link vimHiGroup Normal
+hi! link vimHiAttrib Normal
+hi! link vimHiCTerm Normal
+hi! link vimHiCTermFgBg Normal
+hi! link vimSynType Normal
+hi! link Folded Normal
+hi! link Statement Normal
+hi! link PreProc Normal
+
+hi! Cursor ctermfg=NONE ctermbg=252 cterm=NONE term=NONE
+hi! MatchParen ctermfg=NONE ctermbg=252 cterm=reverse term=reverse
+
+hi! CursorLine ctermfg=NONE ctermbg=234 cterm=NONE term=NONE
+
+hi! Todo ctermfg=NONE ctermbg=226 cterm=NONE term=NONE
+
+hi! LineNr ctermfg=248 ctermbg=NONE cterm=NONE term=NONE
+hi! link FoldColumn LineNr
+
+
+hi! Comment ctermfg=243 ctermbg=NONE cterm=NONE term=NONE
+hi! link vimCommentTitle Comment
+hi! link perlSharpBang Comment
+hi! link rubySharpBang Comment
+
+hi! String ctermfg=67 ctermbg=NONE cterm=NONE term=NONE
+hi! link rubyStringDelimiter String
+hi! link rubyStringEscape String
+hi! link rubyRegexpEscape String
+hi! link rubyRegexpAnchor String
+hi! link rubyRegexpSpecial String
+hi! link perlStringStartEnd String
+hi! link perlStringEscape String
+hi! link perlMatchStartEnd String
+hi! link pythonEscape String
+hi! link elixirDelimiter String
+
+hi! markdownLinkText ctermfg=67 ctermbg=NONE cterm=underline term=underline
+hi! helpHyperTextJump ctermfg=67 ctermbg=NONE cterm=underline term=underline
+
+hi! Visual ctermfg=252 ctermbg=67 cterm=NONE term=NONE
+hi! link Search Visual
+hi! link Pmenu Visual
+hi! PmenuSel ctermfg=67 ctermbg=252 cterm=NONE term=NONE
+
+hi NonText ctermfg=NONE ctermbg=NONE cterm=NONE term=NONE
+hi! link VertSplit NonText
