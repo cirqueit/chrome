@@ -35,7 +35,7 @@ hi! link Statement Normal
 hi! link PreProc Normal
 
 hi! Cursor ctermfg=NONE ctermbg=252 cterm=NONE term=NONE
-hi! MatchParen ctermfg=NONE ctermbg=252 cterm=reverse term=reverse
+hi! MatchParen ctermfg=red ctermbg=252 cterm=NONE term=NONE
 
 hi! CursorLine ctermfg=NONE ctermbg=234 cterm=NONE term=NONE
 
