@@ -35,15 +35,12 @@ hi! link Statement Normal
 hi! link PreProc Normal
 
 hi! Cursor ctermfg=NONE ctermbg=252 cterm=NONE term=NONE
-hi! MatchParen ctermfg=red ctermbg=252 cterm=NONE term=NONE
 
-hi! CursorLine ctermfg=NONE ctermbg=234 cterm=NONE term=NONE
-
-hi! Todo ctermfg=NONE ctermbg=226 cterm=NONE term=NONE
+hi! MatchParen ctermfg=NONE ctermbg=243 cterm=NONE term=NONE
+hi! link Todo MatchParen
 
 hi! LineNr ctermfg=248 ctermbg=NONE cterm=NONE term=NONE
 hi! link FoldColumn LineNr
-
 
 hi! Comment ctermfg=243 ctermbg=NONE cterm=NONE term=NONE
 hi! link vimCommentTitle Comment
@@ -63,7 +60,7 @@ hi! link pythonEscape String
 hi! link elixirDelimiter String
 
 hi! markdownLinkText ctermfg=67 ctermbg=NONE cterm=underline term=underline
-hi! helpHyperTextJump ctermfg=67 ctermbg=NONE cterm=underline term=underline
+hi! link helpHyperTextJump markdownLinkText
 
 hi! Visual ctermfg=252 ctermbg=67 cterm=NONE term=NONE
 hi! link Search Visual
