@@ -13,7 +13,6 @@ hi! link Type Normal
 hi! link Function Normal
 hi! link Identifier Normal
 hi! link Special Normal
-hi! link CursorLineNr Normal
 hi! link rubyConstant Normal
 hi! link javaScriptFunction Normal
 hi! link Directory Normal
@@ -39,13 +38,13 @@ hi! Cursor ctermfg=NONE ctermbg=252 cterm=NONE term=NONE
 hi! MatchParen ctermfg=NONE ctermbg=243 cterm=NONE term=NONE
 hi! link Todo MatchParen
 
-hi! LineNr ctermfg=248 ctermbg=NONE cterm=NONE term=NONE
-hi! link FoldColumn LineNr
-
 hi! Comment ctermfg=243 ctermbg=NONE cterm=NONE term=NONE
 hi! link vimCommentTitle Comment
 hi! link perlSharpBang Comment
 hi! link rubySharpBang Comment
+hi! link CursorLineNr Comment
+hi! link LineNr Comment
+hi! link FoldColumn Comment
 
 hi! String ctermfg=67 ctermbg=NONE cterm=NONE term=NONE
 hi! link rubyStringDelimiter String
