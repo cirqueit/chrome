@@ -66,5 +66,8 @@ hi! link Search Visual
 hi! link Pmenu Visual
 hi! PmenuSel ctermfg=67 ctermbg=252 cterm=NONE term=NONE
 
-hi NonText ctermfg=NONE ctermbg=NONE cterm=NONE term=NONE
+hi! NonText ctermfg=NONE ctermbg=NONE cterm=NONE term=NONE
 hi! link VertSplit NonText
+
+hi! link StatusLineNC Comment
+hi! link StatusLine String
