@@ -45,7 +45,7 @@ hi! link CursorLineNr Comment
 hi! link LineNr Comment
 hi! link FoldColumn Comment
 
-hi! markdownLinkText guifg=#7777ff ctermfg=67 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
+hi! String guifg=#5f87af ctermfg=67 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi! link rubyStringDelimiter String
 hi! link rubyStringEscape String
 hi! link rubyRegexpEscape String
@@ -57,13 +57,13 @@ hi! link perlMatchStartEnd String
 hi! link pythonEscape String
 hi! link elixirDelimiter String
 
-hi! markdownLinkText guifg=#7777ff ctermfg=67 guibg=NONE ctermbg=NONE gui=underline cterm=underline term=underline
+hi! markdownLinkText guifg=#5f87af ctermfg=67 guibg=NONE ctermbg=NONE gui=underline cterm=underline term=underline
 hi! link helpHyperTextJump markdownLinkText
 
-hi! Visual guifg=#dddddd ctermfg=252 guibg=#7777ff ctermbg=67 gui=NONE cterm=NONE term=NONE
+hi! Visual guifg=#dddddd ctermfg=252 guibg=#5f87af  ctermbg=67 gui=NONE cterm=NONE term=NONE
 hi! link Search Visual
 hi! link Pmenu Visual
-hi! PmenuSel guifg=#7777ff ctermfg=67 guibg=#dddddd ctermbg=252 gui=NONE cterm=NONE term=NONE
+hi! PmenuSel guifg=#5f87af ctermfg=67 guibg=#dddddd ctermbg=252 gui=NONE cterm=NONE term=NONE
 
 hi! NonText guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi! link VertSplit NonText
