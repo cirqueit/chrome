@@ -7,7 +7,7 @@ endif
 
 let g:colors_name = 'chrome'
 
-hi! Normal ctermfg=252 ctermbg=NONE cterm=NONE term=NONE
+hi! Normal guifg=#dddddd ctermfg=252 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi! link Constant Normal
 hi! link Type Normal
 hi! link Function Normal
@@ -33,12 +33,11 @@ hi! link Folded Normal
 hi! link Statement Normal
 hi! link PreProc Normal
 
-hi! Cursor ctermfg=NONE ctermbg=252 cterm=NONE term=NONE
-
+hi! Cursor guifg=NONE ctermfg=NONE guibg=#dddddd ctermbg=252 gui=NONE cterm=NONE term=NONE
 hi! MatchParen ctermfg=NONE ctermbg=243 cterm=NONE term=NONE
 hi! link Todo MatchParen
 
-hi! Comment ctermfg=243 ctermbg=NONE cterm=NONE term=NONE
+hi! Comment guifg=#888888 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi! link vimCommentTitle Comment
 hi! link perlSharpBang Comment
 hi! link rubySharpBang Comment
@@ -46,7 +45,7 @@ hi! link CursorLineNr Comment
 hi! link LineNr Comment
 hi! link FoldColumn Comment
 
-hi! String ctermfg=67 ctermbg=NONE cterm=NONE term=NONE
+hi! markdownLinkText guifg=#7777ff ctermfg=67 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi! link rubyStringDelimiter String
 hi! link rubyStringEscape String
 hi! link rubyRegexpEscape String
@@ -58,15 +57,15 @@ hi! link perlMatchStartEnd String
 hi! link pythonEscape String
 hi! link elixirDelimiter String
 
-hi! markdownLinkText ctermfg=67 ctermbg=NONE cterm=underline term=underline
+hi! markdownLinkText guifg=#7777ff ctermfg=67 guibg=NONE ctermbg=NONE gui=underline cterm=underline term=underline
 hi! link helpHyperTextJump markdownLinkText
 
-hi! Visual ctermfg=252 ctermbg=67 cterm=NONE term=NONE
+hi! Visual guifg=#dddddd ctermfg=252 guibg=#7777ff ctermbg=67 gui=NONE cterm=NONE term=NONE
 hi! link Search Visual
 hi! link Pmenu Visual
-hi! PmenuSel ctermfg=67 ctermbg=252 cterm=NONE term=NONE
+hi! PmenuSel guifg=#7777ff ctermfg=67 guibg=#dddddd ctermbg=252 gui=NONE cterm=NONE term=NONE
 
-hi! NonText ctermfg=NONE ctermbg=NONE cterm=NONE term=NONE
+hi! NonText guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
 hi! link VertSplit NonText
 
 hi! link StatusLineNC Comment
