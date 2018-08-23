@@ -20,19 +20,18 @@ function! s:h(group, style)
 endfunction
 
 let s:normal	= { "gui": "#dddddd", "cterm": "252"  }
-let s:bg	= { "gui": "#300A24", "cterm": "NONE"  }
 let s:comment   = { "gui": "#888888", "cterm": "243"  }
 let s:string    = { "gui": "#5f87af", "cterm": "75"  }
 let s:none      = { "gui": "NONE",    "cterm": "NONE"  }
 
-call s:h("Normal",    {"fg": s:normal,  "bg": s:bg})
+call s:h("Normal",    {"fg": s:normal,  "bg": s:none})
 call s:h("Cursor",    {"fg": s:none,    "bg": s:normal})
 call s:h("Todo",      {"fg": s:none,    "bg": s:comment})
 call s:h("Comment",   {"fg": s:comment, "bg": s:none})
 call s:h("String",    {"fg": s:string,  "bg": s:none})
 call s:h("Tag",       {"fg": s:string,  "bg": s:none, "gui": "underline", "cterm": "underline"})
-call s:h("IncSearch", {"fg": s:string,  "bg": s:normal})
-call s:h("Search",    {"fg": s:normal,  "bg": s:string})
+call s:h("Search",    {"fg": s:string,  "bg": s:normal})
+call s:h("IncSearch", {"fg": s:normal,  "bg": s:string})
 call s:h("NonText",   {"fg": s:none,    "bg": s:none})
 
 
@@ -85,10 +84,10 @@ hi! link StatusLine 			String
 hi! link helpHyperTextJump 		Tag
 hi! link markdownLinkText  		Tag
 
-hi! link Pmenu 				Search
-hi! link Visual 			Search
+hi! link Pmenu 				IncSearch
+hi! link Visual 			IncSearch
 
-hi! link PmenuSel 			IncSearch
+hi! link PmenuSel 			Search
 
 hi! link VertSplit 			NonText
 
