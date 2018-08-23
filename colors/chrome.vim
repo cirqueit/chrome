@@ -8,69 +8,123 @@ endif
 
 let g:colors_name = 'chrome'
 
-hi! Normal guifg=#dddddd ctermfg=252 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
-hi! link Constant Normal
-hi! link Type Normal
-hi! link Function Normal
-hi! link Identifier Normal
-hi! link Special Normal
-hi! link rubyConstant Normal
-hi! link javaScriptFunction Normal
-hi! link Directory Normal
-hi! link Title Normal
-hi! link markdownHeadingDelimiter Normal
-hi! link markdownHeadingRule Normal
-hi! link helpSpecial Normal
-hi! link helpNote Normal
-hi! link vimOption Normal
-hi! link vimGroup Normal
-hi! link vimHiClear Normal
-hi! link vimHiGroup Normal
-hi! link vimHiAttrib Normal
-hi! link vimHiCTerm Normal
-hi! link vimHiCTermFgBg Normal
-hi! link vimSynType Normal
-hi! link Folded Normal
-hi! link Statement Normal
-hi! link PreProc Normal
+function! s:h(group, style)
+  execute "highlight" a:group
+    \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
+    \ "guibg="   (has_key(a:style, "bg")    ? a:style.bg.gui   : "NONE")
+    \ "guisp="   (has_key(a:style, "sp")    ? a:style.sp.gui   : "NONE")
+    \ "gui="     (has_key(a:style, "gui")   ? a:style.gui      : "NONE")
+    \ "ctermfg=" (has_key(a:style, "fg")    ? a:style.fg.cterm : "NONE")
+    \ "ctermbg=" (has_key(a:style, "bg")    ? a:style.bg.cterm : "NONE")
+    \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
+endfunction
 
-hi! Cursor guifg=NONE ctermfg=NONE guibg=#dddddd ctermbg=252 gui=NONE cterm=NONE term=NONE
-hi! MatchParen ctermfg=NONE ctermbg=243 cterm=NONE term=NONE
-hi! link Todo MatchParen
+let s:normal	= { "gui": "#dddddd", "cterm": "252"  }
+let s:bg	= { "gui": "#300A24", "cterm": "NONE"  }
+let s:comment   = { "gui": "#888888", "cterm": "243"  }
+let s:string    = { "gui": "#5f87af", "cterm": "75"  }
+let s:none      = { "gui": "NONE",    "cterm": "NONE"  }
 
-hi! Comment guifg=#888888 ctermfg=243 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
-hi! link vimCommentTitle Comment
-hi! link perlSharpBang Comment
-hi! link rubySharpBang Comment
-hi! link CursorLineNr Comment
-hi! link LineNr Comment
-hi! link FoldColumn Comment
+call s:h("Normal",    {"fg": s:normal,  "bg": s:bg})
+call s:h("Cursor",    {"fg": s:none,    "bg": s:normal})
+call s:h("Todo",      {"fg": s:none,    "bg": s:comment})
+call s:h("Comment",   {"fg": s:comment, "bg": s:none})
+call s:h("String",    {"fg": s:string,  "bg": s:none})
+call s:h("Tag",       {"fg": s:string,  "bg": s:none, "gui": "underline", "cterm": "underline"})
+call s:h("IncSearch", {"fg": s:string,  "bg": s:normal})
+call s:h("Search",    {"fg": s:normal,  "bg": s:string})
+call s:h("NonText",   {"fg": s:none,    "bg": s:none})
 
-hi! String guifg=#5f87af ctermfg=75 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
-hi! link rubyStringDelimiter String
-hi! link rubyStringEscape String
-hi! link rubyRegexpEscape String
-hi! link rubyRegexpAnchor String
-hi! link rubyRegexpSpecial String
-hi! link perlStringStartEnd String
-hi! link perlStringEscape String
-hi! link perlMatchStartEnd String
-hi! link pythonEscape String
-hi! link elixirDelimiter String
 
-hi! markdownLinkText guifg=#5f87af ctermfg=75 guibg=NONE ctermbg=NONE gui=underline cterm=underline term=underline
-hi! link helpHyperTextJump markdownLinkText
 
-" hi! Visual guifg=#dddddd ctermfg=252 guibg=#5f87af  ctermbg=98 gui=NONE cterm=NONE term=NONE
-" hi! PmenuSel guifg=#5f87af ctermfg=98 guibg=#dddddd ctermbg=252 gui=NONE cterm=NONE term=NONE
-hi! Visual guifg=#dddddd   ctermfg=252 guibg=#5f87af ctermbg=98 gui=NONE cterm=NONE term=NONE
-hi! PmenuSel guifg=#5f87af ctermfg=98 guibg=#dddddd ctermbg=252 gui=NONE cterm=NONE term=NONE
-hi! link Search Visual
-hi! link Pmenu Visual
 
-hi! NonText guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=NONE cterm=NONE term=NONE
-hi! link VertSplit NonText
+hi! link Constant 			Normal
+hi! link Type 				Normal
+hi! link Function 			Normal
+hi! link Identifier 			Normal
+hi! link Special 			Normal
+hi! link rubyConstant 			Normal
+hi! link javaScriptFunction 		Normal
+hi! link Directory 			Normal
+hi! link Title 				Normal
+hi! link markdownHeadingDelimiter 	Normal
+hi! link markdownHeadingRule 		Normal
+hi! link helpSpecial 			Normal
+hi! link helpNote 			Normal
+hi! link vimOption 			Normal
+hi! link vimGroup 			Normal
+hi! link vimHiClear 			Normal
+hi! link vimHiGroup 			Normal
+hi! link vimHiAttrib 			Normal
+hi! link vimHiCTerm 			Normal
+hi! link vimHiCTermFgBg 		Normal
+hi! link vimSynType 			Normal
+hi! link Folded 			Normal
+hi! link Statement 			Normal
+hi! link PreProc 			Normal
+hi! link SignColumn 			Normal
+hi! link SignifySignAdd 		Normal
+hi! link SignifySignDelete 		Normal
+hi! link SignifySignChange 		Normal
+hi! link Delimiter  			Normal
 
-hi! link StatusLineNC Comment
-hi! link StatusLine String
+hi! link MatchParen 			Todo
 
+hi! link rubyStringDelimiter 		String
+hi! link rubyStringEscape 		String
+hi! link rubyRegexpEscape 		String
+hi! link rubyRegexpAnchor 		String
+hi! link rubyRegexpSpecial 		String
+hi! link perlStringStartEnd 		String
+hi! link perlStringEscape 		String
+hi! link perlMatchStartEnd 		String
+hi! link pythonEscape 			String
+hi! link elixirDelimiter 		String
+hi! link StatusLine 			String
+
+hi! link helpHyperTextJump 		Tag
+hi! link markdownLinkText  		Tag
+
+hi! link Pmenu 				Search
+hi! link Visual 			Search
+
+hi! link PmenuSel 			IncSearch
+
+hi! link VertSplit 			NonText
+
+hi! link VisualNOS 			Comment
+hi! link vimCommentTitle 		Comment
+hi! link perlSharpBang 			Comment
+hi! link rubySharpBang 			Comment
+hi! link CursorLineNr 			Comment
+hi! link LineNr 			Comment
+hi! link FoldColumn 			Comment
+hi! link LimelightDim 			Comment
+hi! link SignifySignAdd              	Comment
+hi! link SignifySignDelete           	Comment
+hi! link SignifySignChange           	Comment
+hi! link GitGutterAdd                	Comment
+hi! link GitGutterDelete             	Comment
+hi! link GitGutterChange             	Comment
+hi! link GitGutterChangeDelete       	Comment
+hi! link StatusLineNC 			Comment
+hi! link StatusLineError 		Comment
+hi! link StatusLineWarning 		Comment
+hi! link DiffAdd 			Comment
+hi! link DiffDelete 			Comment
+hi! link Noise 				Comment
+hi! link SpecialChar  			Comment
+hi! link SpecialComment  		Comment
+hi! link Debug  			Comment
+hi! link Error 				Comment 
+hi! link ErrorMsg 			Comment
+hi! link Question 			Comment
+hi! link WarningMsg 			Comment
+hi! link DiffChange 			Comment
+hi! link DiffText 			Comment
+hi! link diffRemoved 			Comment
+hi! link diffAdded    			Comment
+hi! link CursorColumn 			Comment
+hi! link CursorLine 			Comment
+hi! link ColorColumn 			Comment
+hi! link qfLineNr 			Comment
