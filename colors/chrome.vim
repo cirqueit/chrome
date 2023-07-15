@@ -67,7 +67,7 @@ hi! link SignifySignDelete 		Normal
 hi! link SignifySignChange 		Normal
 hi! link Delimiter  			Normal
 
-hi! link MatchParen 			Todo
+hi! link MatchParen 			Comment
 
 hi! link rubyStringDelimiter 		String
 hi! link rubyStringEscape 		String
